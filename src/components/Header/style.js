@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     shadowOffset: {width: 1, height: 3},
     shadowOpacity: 0.2,
     marginBottom: 20,
+    elevation: 1.1,
   },
   backButtonContainer: {
     marginLeft: 10,
