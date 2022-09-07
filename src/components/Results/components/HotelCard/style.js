@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -6,7 +6,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignSelf: 'center',
     width: Dimensions.get('window').width / 1.05,
-    height: Dimensions.get('window').height / 2.3,
+    height: Platform.OS === 'ios'
+        ? Dimensions.get('window').height / 2.3
+        : Dimensions.get('window').height / 2.2,
     marginVertical: 10,
     backgroundColor: '#fff',
     borderRadius: 15,
